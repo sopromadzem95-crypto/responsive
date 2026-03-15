@@ -183,6 +183,7 @@
 }
 
 .section2-texts-arrows {
+  width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -217,6 +218,8 @@
 
 .card1 {
   max-width: 372px;
+  width: 100%;
+  height: 575px;
   border-radius: 32px;
   box-shadow: 0px 32px 71px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -225,6 +228,9 @@
 }
 .card-image {
   width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 32px;
 }
 
 .h4-cards {
@@ -283,7 +289,7 @@
   max-width: 1184px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  column-gap: 32px;
   margin-top: 64px;
 }
 
@@ -375,13 +381,31 @@
 /* Responsive styles */
 
 @media (max-width: 1024px) {
-  .menu {
-    display: block;
-  }
+
+  /* header responsive */
 
   .nav-lists {
     display: none;
   }
+
+  .menu {
+    display: flex;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .header-buttons {
+    column-gap: 8px;
+  }
+
+  .sign-up {
+    width: 95px;
+    height: 44px;
+  }
+
+  /* section 1 responsive */
 
   .section1 {
     display: flex;
@@ -398,6 +422,8 @@
   .right-div {
     width: 100%;
   }
+
+  /* section 2 responsive */
 
   .section2-texts-arrows {
     max-width: 896px;
@@ -420,9 +446,45 @@
     gap: 16px;
   }
 
+  .card-image {
+    width: 100%;
+    height: 314px;
+  }
+
   .price {
     order: -1;
   }
+
+  .section2-texts {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .arrow1,.arrow2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card1 {
+    width: 100%;
+  }
+
+  .h3-section2 {
+    font-size: 40px;
+  }
+
+  .h4-section2 {
+    font-size: 20px;
+  }
+
+  .card-texts {
+    padding: 24px;
+  }
+
+  /* section 3 responsive */
 
   .section3 {
     display: flex;
@@ -451,6 +513,9 @@
 }
 
 @media (max-width: 430px) {
+
+  /* header responsive */
+
   .menu {
     display: block;
     order: 2;
@@ -463,6 +528,8 @@
   .header-buttons {
     display: none;
   }
+
+  /* section 1 responsive */
 
   .section1-buttons {
     display: flex;
@@ -477,17 +544,12 @@
     width: 100%;
   }
 
+  /* section 2 responsive */
+
   .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .box-card-1,
-  .box-card-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .arrows {
@@ -506,5 +568,14 @@
     line-height: 120%;
     letter-spacing: 0%;
     color: #191825;
+  }
+
+  /* section 3 responsive */
+
+  .box-card-1,
+  .box-card-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
